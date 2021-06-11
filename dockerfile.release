@@ -1,4 +1,4 @@
-FROM node:14.16 AS build
+FROM nerdscomputing/hermes.cam:from AS build
 WORKDIR /srv/hermes.cam
 
 ARG VERSION="2021.0.0"
@@ -8,7 +8,10 @@ COPY . .
 RUN yarn
 RUN yarn build
 
-FROM node:14.16
+FROM node:14.16-alpine
 WORKDIR /srv/hermes.cam
 COPY --from=build /srv/hermes.cam/build .
-ENTRYPOINT ["sh", "-c", "serve -s ."]
+
+RUN npm install -g serve
+
+ENTRYPOINT ["sh", "-c", "serve -s -l 80 ."]
