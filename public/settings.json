@@ -1,0 +1,6 @@
+{
+  "environment": "Local",
+  "backend": {
+    "url": "https://hermes.api.dev.k8s.nerds.sh"
+  }
+}
