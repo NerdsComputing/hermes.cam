@@ -5,6 +5,8 @@ ARG VERSION="2021.0.0"
 
 COPY . .
 
+RUN echo '{ "version": "'$VERSION'" }' > ./public/version.json
+
 RUN yarn
 RUN yarn build
 
