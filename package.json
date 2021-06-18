@@ -7,8 +7,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint . --ext=js,jsx --config .eslintrc.local.json;",
-    "lint:fix": "eslint . --ext=js,jsx --fix --config .eslintrc.ci.json;"
+    "lint": "eslint . --ext=js,jsx --config .eslintconfig;",
+    "lint:fix": "eslint . --ext=js,jsx --fix --config .eslintconfig;"
   },
   "dependencies": {
     "@reduxjs/toolkit": "1.6.0",
@@ -17,6 +17,7 @@
     "@tensorflow/tfjs-backend-webgl": "3.7.0",
     "@tensorflow/tfjs-converter": "3.7.0",
     "@tensorflow/tfjs-core": "3.7.0",
+    "prop-types": "15.7.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-ga": "3.3.0",
