@@ -3,13 +3,13 @@ import '@tensorflow/tfjs-backend-webgl';
 
 import React from 'react';
 
-import {Camera} from "./camera";
 import {Behaviour} from "./behaviour";
 import {Detections} from "./detections";
 import {Context, useValue} from "./context";
+import {Camera as CameraComponent} from "./camera";
 
-export const App = () => <Context.Provider value={useValue()}>
+export const Camera = () => <Context.Provider value={useValue()}>
   <Behaviour/>
-  <Camera/>
+  <CameraComponent/>
   <Detections/>
 </Context.Provider>
