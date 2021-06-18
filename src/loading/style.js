@@ -18,5 +18,5 @@ export const style = {
 
   background: 'white',
   zIndex: 99999,
-  fontWeight: 600
+  fontWeight: 600,
 }

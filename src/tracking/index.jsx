@@ -1,4 +1,4 @@
-import {useTracking} from "./hooks/use-tracking";
+import { useTracking } from 'tracking/hooks/use-tracking'
 
 export const Tracking = () => {
   useTracking()

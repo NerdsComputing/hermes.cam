@@ -1,6 +1,6 @@
 FROM mcr.microsoft.com/dotnet/sdk:5.0
 
-RUN curl -sL https://deb.nodesource.com/setup_12.x | sh
+RUN curl -sL https://deb.nodesource.com/setup_14.x | sh
 
 RUN apt update
 RUN apt install ncftp -y
@@ -8,6 +8,7 @@ RUN apt install lftp -y
 RUN apt install wget -y
 RUN apt install python3 -y
 RUN apt install nodejs -y
+RUN npm install -g yarn
 
 RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
 RUN chmod +x ./kubectl

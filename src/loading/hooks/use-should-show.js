@@ -1,3 +1,3 @@
-import {useSelector} from "react-redux";
+import { useSelector } from 'react-redux'
 
 export const useShouldShow = () => useSelector(state => state.loading.length)

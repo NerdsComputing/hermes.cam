@@ -1,10 +1,10 @@
-FROM node:14.16-alpine
+FROM node:14.17-alpine
 WORKDIR /srv/hermes.cam
 
 COPY package.json ./
 COPY yarn.lock ./
 
-RUN npm install
+RUN yarn install
 
 RUN rm package.json
 RUN rm yarn.lock
