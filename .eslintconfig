@@ -38,92 +38,92 @@
     "jest": true
   },
   "rules": {
-    "no-extra-parens": "warn",
+    "no-extra-parens": "error",
     "template-curly-spacing": [
-      "warn",
+      "error",
       "never"
     ],
     "rest-spread-spacing": [
-      "warn",
+      "error",
       "never"
     ],
-    "prefer-template": "warn",
-    "prefer-spread": "warn",
-    "prefer-rest-params": "warn",
+    "prefer-template": "error",
+    "prefer-spread": "error",
+    "prefer-rest-params": "error",
     "prefer-destructuring": [
-      "warn",
+      "error",
       {
         "array": true,
         "object": true
       }
     ],
-    "prefer-const": "warn",
-    "no-var": "warn",
-    "no-useless-constructor": "warn",
+    "prefer-const": "error",
+    "no-var": "error",
+    "no-useless-constructor": "error",
     "no-useless-computed-key": [
-      "warn",
+      "error",
       {
         "enforceForClassMembers": true
       }
     ],
     "arrow-spacing": [
-      "warn",
+      "error",
       {
         "before": true,
         "after": true
       }
     ],
     "arrow-parens": [
-      "warn",
+      "error",
       "as-needed"
     ],
     "arrow-body-style": [
-      "warn",
+      "error",
       "as-needed"
     ],
     "switch-colon-spacing": [
-      "warn",
+      "error",
       {
         "after": true,
         "before": false
       }
     ],
     "space-unary-ops": [
-      "warn",
+      "error",
       {
         "words": true,
         "nonwords": false
       }
     ],
     "space-in-parens": [
-      "warn",
+      "error",
       "never"
     ],
     "space-before-function-paren": [
-      "warn",
+      "error",
       "never"
     ],
     "space-before-blocks": [
-      "warn",
+      "error",
       "always"
     ],
     "semi-spacing": [
-      "warn",
+      "error",
       {
         "before": false,
         "after": true
       }
     ],
     "semi-style": [
-      "warn",
+      "error",
       "last"
     ],
     "semi": [
-      "warn",
+      "error",
       "never"
     ],
     "quotes": [
-      "warn",
+      "error",
       "single",
       {
         "avoidEscape": true,
@@ -131,12 +131,12 @@
       }
     ],
     "quote-props": [
-      "warn",
+      "error",
       "as-needed"
     ],
-    "prefer-object-spread": "warn",
+    "prefer-object-spread": "error",
     "padding-line-between-statements": [
-      "warn",
+      "error",
       {
         "blankLine": "always",
         "prev": "*",
@@ -154,35 +154,35 @@
       }
     ],
     "padded-blocks": [
-      "warn",
+      "error",
       "never"
     ],
     "operator-linebreak": [
-      "warn",
+      "error",
       "none"
     ],
     "operator-assignment": [
-      "warn",
+      "error",
       "always"
     ],
     "object-property-newline": [
-      "warn",
+      "error",
       {
         "allowAllPropertiesOnSameLine": true
       }
     ],
     "object-curly-spacing": [
-      "warn",
+      "error",
       "always",
       {
         "arraysInObjects": true,
         "objectsInObjects": true
       }
     ],
-    "no-whitespace-before-property": "warn",
-    "no-unneeded-ternary": "warn",
+    "no-whitespace-before-property": "error",
+    "no-unneeded-ternary": "error",
     "no-underscore-dangle": [
-      "warn",
+      "error",
       {
         "allowAfterThis": false,
         "allowAfterSuper": false,
@@ -191,63 +191,63 @@
       }
     ],
     "no-trailing-spaces": [
-      "warn",
+      "error",
       {
         "skipBlankLines": false,
         "ignoreComments": false
       }
     ],
-    "no-nested-ternary": "warn",
+    "no-nested-ternary": "error",
     "no-multiple-empty-lines": [
-      "warn",
+      "error",
       {
         "max": 1,
         "maxBOF": 0,
         "maxEOF": 1
       }
     ],
-    "no-lonely-if": "warn",
+    "no-lonely-if": "error",
     "newline-per-chained-call": [
-      "warn",
+      "error",
       {
         "ignoreChainWithDepth": 2
       }
     ],
     "new-parens": [
-      "warn",
+      "error",
       "always"
     ],
     "multiline-ternary": [
-      "warn",
+      "error",
       "always-multiline"
     ],
     "lines-between-class-members": [
-      "warn",
+      "error",
       "always"
     ],
     "linebreak-style": [
-      "warn",
+      "error",
       "unix"
     ],
     "keyword-spacing": [
-      "warn",
+      "error",
       {
         "before": true,
         "after": true
       }
     ],
     "object-curly-newline": [
-      "warn",
+      "error",
       {
         "multiline": true
       }
     ],
     "object-shorthand": [
-      "warn",
+      "error",
       "always"
     ],
     "key-spacing": [
-      "warn",
+      "error",
       {
         "beforeColon": false,
         "afterColon": true,
@@ -255,70 +255,70 @@
       }
     ],
     "jsx-quotes": [
-      "warn",
+      "error",
       "prefer-single"
     ],
     "function-paren-newline": [
-      "warn",
+      "error",
       "never"
     ],
     "function-call-argument-newline": [
-      "warn",
+      "error",
       "never"
     ],
     "func-call-spacing": [
-      "warn",
+      "error",
       "never"
     ],
     "eol-last": [
-      "warn",
+      "error",
       "always"
     ],
     "comma-style": [
-      "warn",
+      "error",
       "last"
     ],
     "comma-spacing": [
-      "warn",
+      "error",
       {
         "before": false,
         "after": true
       }
     ],
-    "no-useless-return": "warn",
+    "no-useless-return": "error",
     "max-statements-per-line": [
-      "warn",
+      "error",
       {
         "max": 1
       }
     ],
     "max-params": [
-      "warn",
+      "error",
       {
         "max": 2
       }
     ],
     "max-nested-callbacks": [
-      "warn",
+      "error",
       {
         "max": 2
       }
     ],
     "max-depth": [
-      "warn",
+      "error",
       {
         "max": 2
       }
     ],
     "complexity": [
-      "warn",
+      "error",
       {
         "max": 3
       }
     ],
-    "prefer-arrow-callback": "warn",
+    "prefer-arrow-callback": "error",
     "max-lines-per-function": [
-      "warn",
+      "error",
       {
         "skipBlankLines": true,
         "skipComments": false,
@@ -326,7 +326,7 @@
       }
     ],
     "max-lines": [
-      "warn",
+      "error",
       {
         "max": 80,
         "skipBlankLines": false,
@@ -334,7 +334,7 @@
       }
     ],
     "no-restricted-imports": [
-      "warn",
+      "error",
       {
         "patterns": [
           "./*",
@@ -343,7 +343,7 @@
       }
     ],
     "comma-dangle": [
-      "warn",
+      "error",
       {
         "arrays": "always-multiline",
         "objects": "always-multiline",
@@ -353,13 +353,13 @@
       }
     ],
     "max-len": [
-      "warn",
+      "error",
       {
         "code": 120
       }
     ],
     "indent": [
-      "warn",
+      "error",
       2,
       {
         "ignoredNodes": [
@@ -368,103 +368,103 @@
       }
     ],
     "implicit-arrow-linebreak": [
-      "warn",
+      "error",
       "beside"
     ],
-    "react/prop-types": "warn",
+    "react/prop-types": "error",
     "react/jsx-indent-props": [
-      "warn",
+      "error",
       "first"
     ],
-    "react/no-multi-comp": "warn",
-    "react/no-deprecated": "warn",
-    "react/prefer-stateless-function": "warn",
-    "react/jsx-filename-extension": "warn",
+    "react/no-multi-comp": "error",
+    "react/no-deprecated": "error",
+    "react/prefer-stateless-function": "error",
+    "react/jsx-filename-extension": "error",
     "react/jsx-closing-bracket-location": [
-      "warn",
+      "error",
       "after-props"
     ],
-    "react/self-closing-comp": "warn",
-    "react/boolean-prop-naming": "warn",
-    "react/default-props-match-prop-types": "warn",
+    "react/self-closing-comp": "error",
+    "react/boolean-prop-naming": "error",
+    "react/default-props-match-prop-types": "error",
     "react/destructuring-assignment": "off",
-    "react/forbid-foreign-prop-types": "warn",
+    "react/forbid-foreign-prop-types": "error",
     "react/function-component-definition": [
-      "warn",
+      "error",
       {
         "namedComponents": "arrow-function",
         "unnamedComponents": "arrow-function"
       }
     ],
-    "react/no-access-state-in-setstate": "warn",
-    "react/no-children-prop": "warn",
-    "react/no-danger": "warn",
-    "react/no-did-mount-set-state": "warn",
-    "react/no-did-update-set-state": "warn",
-    "react/no-direct-mutation-state": "warn",
-    "react/no-find-dom-node": "warn",
-    "react/no-is-mounted": "warn",
-    "react/no-redundant-should-component-update": "warn",
-    "react/no-render-return-value": "warn",
-    "react/no-this-in-sfc": "warn",
-    "react/no-typos": "warn",
-    "react/no-unescaped-entities": "warn",
-    "react/no-unknown-property": "warn",
-    "react/no-unsafe": "warn",
-    "react/no-unused-prop-types": "warn",
-    "react/no-unused-state": "warn",
-    "react/no-will-update-set-state": "warn",
-    "react/require-default-props": "warn",
+    "react/no-access-state-in-setstate": "error",
+    "react/no-children-prop": "error",
+    "react/no-danger": "error",
+    "react/no-did-mount-set-state": "error",
+    "react/no-did-update-set-state": "error",
+    "react/no-direct-mutation-state": "error",
+    "react/no-find-dom-node": "error",
+    "react/no-is-mounted": "error",
+    "react/no-redundant-should-component-update": "error",
+    "react/no-render-return-value": "error",
+    "react/no-this-in-sfc": "error",
+    "react/no-typos": "error",
+    "react/no-unescaped-entities": "error",
+    "react/no-unknown-property": "error",
+    "react/no-unsafe": "error",
+    "react/no-unused-prop-types": "error",
+    "react/no-unused-state": "error",
+    "react/no-will-update-set-state": "error",
+    "react/require-default-props": "error",
     "react/jsx-boolean-value": [
-      "warn",
+      "error",
       "never"
     ],
     "react/jsx-curly-brace-presence": [
-      "warn",
+      "error",
       {
         "props": "always",
         "children": "never"
       }
     ],
     "react/jsx-curly-newline": [
-      "warn",
+      "error",
       "consistent"
     ],
     "react/jsx-curly-spacing": [
-      "warn",
+      "error",
       "never"
     ],
     "react/jsx-equals-spacing": [
-      "warn",
+      "error",
       "never"
     ],
     "react/jsx-first-prop-new-line": [
-      "warn",
+      "error",
       "never"
     ],
     "react/jsx-fragments": [
-      "warn",
+      "error",
       "syntax"
     ],
-    "react/jsx-handler-names": "warn",
+    "react/jsx-handler-names": "error",
     "react/jsx-indent": [
-      "warn",
+      "error",
       2
     ],
     "react/jsx-max-depth": [
-      "warn",
+      "error",
       {
         "max": 3
       }
     ],
-    "react/jsx-no-comment-textnodes": "warn",
-    "react/jsx-no-duplicate-props": "warn",
-    "react/jsx-no-script-url": "warn",
-    "react/jsx-no-useless-fragment": "warn",
-    "react/jsx-pascal-case": "warn",
-    "react/jsx-props-no-multi-spaces": "warn",
+    "react/jsx-no-comment-textnodes": "error",
+    "react/jsx-no-duplicate-props": "error",
+    "react/jsx-no-script-url": "error",
+    "react/jsx-no-useless-fragment": "error",
+    "react/jsx-pascal-case": "error",
+    "react/jsx-props-no-multi-spaces": "error",
     "react/jsx-tag-spacing": [
-      "warn",
+      "error",
       {
         "closingSlash": "never",
         "beforeSelfClosing": "always",
@@ -473,35 +473,36 @@
       }
     ],
     "react/jsx-one-expression-per-line": [
-      "warn",
+      "error",
       {
         "allow": "single-child"
       }
     ],
     "filenames/match-regex": [
-      "warn",
+      "error",
       "^[a-z-]+$",
       true
     ],
     "filenames/match-exported": [
-      "warn",
+      "error",
       "kebab"
     ],
     "filenames/no-index": "off",
     "import/newline-after-import": [
-      "warn",
+      "error",
       {
         "count": 1
       }
     ],
     "import/exports-last": "off",
     "import/extensions": [
-      "warn",
+      "error",
       "never"
     ],
-    "no-return-assign": "warn",
-    "node/no-callback-literal": "warn",
-    "no-debugger": "warn"
+    "no-return-assign": "error",
+    "node/no-callback-literal": "error",
+    "no-debugger": "error",
+    "react-hooks/exhaustive-deps": "error"
   },
   "overrides": [
     {

@@ -2,3 +2,6 @@
 doc
 scripts
 build
+src/serviceWorkerRegistration.js
+src/service-worker.js
+src/reportWebVitals.js
