@@ -8,9 +8,5 @@ export const useValue = () => {
   const camera = useRef()
   const [objects, setObjects] = useState([])
 
-  return {
-    camera,
-    objects,
-    setObjects,
-  }
+  return { camera, objects, setObjects }
 }

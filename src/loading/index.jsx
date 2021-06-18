@@ -1,3 +1,5 @@
+import React from 'react'
+
 import { style } from 'loading/style'
 import { useShouldShow } from 'loading/hooks/use-should-show'
 

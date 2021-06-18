@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const makeStyles = ([left, top, right, _bottom]) => ({
   position: 'absolute',
@@ -9,3 +10,5 @@ const makeStyles = ([left, top, right, _bottom]) => ({
 export const Detection = ({ data }) => <div style={makeStyles(data.bbox)}>
   {data.class}
 </div>
+
+Detection.propTypes = { data: PropTypes.object.isRequired }

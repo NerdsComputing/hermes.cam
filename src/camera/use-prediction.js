@@ -19,5 +19,5 @@ export const usePrediction = () => {
     const subscription = makeSubscription({ camera, startPrediction })
 
     return () => subscription.unsubscribe()
-  }, [])
+  }, [camera, startPrediction])
 }

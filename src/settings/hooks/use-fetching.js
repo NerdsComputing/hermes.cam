@@ -8,5 +8,5 @@ export const useFetching = () => {
 
   useEffect(() => {
     dispatch(actions.attempt())
-  }, [])
+  }, [dispatch])
 }

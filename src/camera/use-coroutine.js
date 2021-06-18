@@ -11,5 +11,5 @@ export const useCoroutine = () => {
     .pipe(mergeMap(() => from(model.detect(camera.current.video))))
     .pipe(tap(setObjects))
     .pipe(delay(1000))
-    .pipe(repeat()), [])
+    .pipe(repeat()), [camera, setObjects])
 }
