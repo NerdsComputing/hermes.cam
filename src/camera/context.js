@@ -1,4 +1,4 @@
-import React, {useRef, useState} from "react";
+import React, { useRef, useState } from 'react'
 
 export const Context = React.createContext({})
 
@@ -11,6 +11,6 @@ export const useValue = () => {
   return {
     camera,
     objects,
-    setObjects
+    setObjects,
   }
 }

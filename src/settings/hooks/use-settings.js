@@ -1,3 +1,3 @@
-import {useSelector} from "react-redux";
+import { useSelector } from 'react-redux'
 
 export const useSettings = () => useSelector(state => state.settings.value)

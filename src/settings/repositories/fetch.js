@@ -1,6 +1,6 @@
-import {from} from 'rxjs'
-import {fromFetch} from 'rxjs/fetch'
-import {mergeMap, map} from "rxjs/operators";
+import { from } from 'rxjs'
+import { fromFetch } from 'rxjs/fetch'
+import { mergeMap, map } from 'rxjs/operators'
 
 const URL = '/settings.json'
 

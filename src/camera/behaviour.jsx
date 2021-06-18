@@ -1,4 +1,4 @@
-import {usePrediction} from "./use-prediction";
+import { usePrediction } from './use-prediction'
 
 export const Behaviour = () => {
   usePrediction()
