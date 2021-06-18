@@ -10,7 +10,7 @@ RUN echo '{ "version": "'$VERSION'" }' > ./public/version.json
 RUN yarn
 RUN yarn build
 
-FROM node:14.16-alpine
+FROM node:14.17-alpine
 WORKDIR /srv/hermes.cam
 COPY --from=build /srv/hermes.cam/build .
 
