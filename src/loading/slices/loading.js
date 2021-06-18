@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-import * as settings from '../../settings/slices/settings'
+import * as settings from 'settings/slices/settings'
 
 const state = () => [settings.actions.attempt.type]
 

@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { useContext } from './context'
-import { Detection } from './detection'
+import { useContext } from 'camera/context'
+import { Detection } from 'camera/detection'
 
 const styles = {
   position: 'absolute',

@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 
-import { actions } from '../slices/settings'
+import { actions } from 'settings/slices/settings'
 
 export const useFetching = () => {
   const dispatch = useDispatch()

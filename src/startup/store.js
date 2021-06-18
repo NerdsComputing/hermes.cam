@@ -1,8 +1,8 @@
 import { createEpicMiddleware } from 'redux-observable'
 import { applyMiddleware, createStore } from '@reduxjs/toolkit'
 
-import { epics } from './epics'
-import { reducers } from './reducers'
+import { epics } from 'startup/epics'
+import { reducers } from 'startup/reducers'
 
 const middleware = createEpicMiddleware()
 

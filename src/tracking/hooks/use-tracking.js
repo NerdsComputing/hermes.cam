@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import ReactGA from 'react-ga'
 
-import { useSettings } from '../../settings/hooks/use-settings'
+import { useSettings } from 'settings/hooks/use-settings'
 
 export const useTracking = () => {
   const settings = useSettings()

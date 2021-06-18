@@ -1,7 +1,8 @@
-import { useContext } from './context'
 import { from, of } from 'rxjs'
-import { delay, mergeMap, repeat, tap } from 'rxjs/operators'
 import { useCallback } from 'react'
+import { delay, mergeMap, repeat, tap } from 'rxjs/operators'
+
+import { useContext } from 'camera/context'
 
 export const useCoroutine = () => {
   const { camera, setObjects } = useContext()
