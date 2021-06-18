@@ -2,7 +2,7 @@
 
 The mobile part of the hermes platform. It's a PWA app 
 using a camera to detect objects in real time and send them 
-to hermes.api.
+to the hermes.api.
 
 ![index](./doc/index.png)
 
