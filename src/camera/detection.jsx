@@ -7,8 +7,8 @@ const makeStyles = ([left, top, right, _bottom]) => ({
   top,
 })
 
-export const Detection = ({ data }) => <div style={makeStyles(data.bbox)}>
-  {data.class}
+export const Detection = ({ data }) => <div>
+  {`${data.class} ${data.score}`}
 </div>
 
 Detection.propTypes = { data: PropTypes.object.isRequired }

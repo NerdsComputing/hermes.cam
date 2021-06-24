@@ -1,9 +1,9 @@
 import { from, fromEvent } from 'rxjs'
-import { load } from '@tensorflow-models/coco-ssd'
+import {loadLayersModel} from '@tensorflow/tfjs'
 
 const camera = ref => fromEvent(ref.current.video, 'play')
 
-const model = () => from(load({ base: 'mobilenet_v2' }))
+const model = () => from(loadLayersModel(`${process.env.PUBLIC_URL}/model/model.json`))
 
 export const repository = {
   camera,

@@ -5,7 +5,7 @@ import { Detection } from 'camera/detection'
 
 const styles = {
   position: 'absolute',
-  color: 'yellow',
+  color: 'blue',
   fontWeight: 600,
   top: 0,
   left: 0,
