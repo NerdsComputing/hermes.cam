@@ -6,7 +6,7 @@ import * as register from 'camera/slices/register'
 export const useRegistering = () => {
   const dispatch = useDispatch()
   useEffect(() => {
-    dispatch(loading.actions.show('registering-camera'))
+    dispatch(loading.actions.show(register.actions.attempt.type))
     dispatch(register.actions.attempt({}))
   }, [dispatch])
 }
