@@ -11,6 +11,7 @@ const makeSubscription = params => combineLatest([repository.camera(params.camer
   .pipe(mergeMap(params.startPrediction))
   .subscribe()
 
+// eslint-disable-next-line max-lines-per-function
 export const usePrediction = () => {
   const { camera } = useContext()
   const startPrediction = useCoroutine()
