@@ -1,8 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-import * as settings from 'settings/slices/settings'
-
-const state = () => [settings.actions.attempt.type]
+const state = () => []
 
 const show = (state, action) => [...state, action.payload]
 
