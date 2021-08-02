@@ -1,7 +1,7 @@
 {
   "environment": "Local",
   "backend": {
-    "url": "https://hermes.api.dev.k8s.nerds.sh"
+    "graphUrl": "https://hermes.api.dev.k8s.nerds.sh/graphql"
   },
   "google": {
     "trackingId": "UA-199841319-1"
