@@ -1,29 +1,29 @@
 import { useEffect, useMemo } from 'react'
-import { combineLatest } from 'rxjs'
 import { useContext } from 'camera/context'
-import { repository } from 'camera/repository'
-import { mergeMap, map } from 'rxjs/operators'
 import { useCoroutine } from 'camera/hooks/use-coroutine'
 
-const makeSubscription = params => combineLatest([repository.camera(params.camera), repository.model()])
-  .pipe(map(([_, model]) => model))
-  .pipe(mergeMap(params.startPrediction))
-  .subscribe()
-
 const useParams = () => {
-  const { camera } = useContext()
+  const { camera, model, cameraReady } = useContext()
   const startPrediction = useCoroutine()
+  const shouldSkip = useShouldSkip()
+  const factory = () => ({ camera, startPrediction, model, cameraReady, shouldSkip })
 
-  return useMemo(() => ({ camera, startPrediction }), [camera, startPrediction])
+  return useMemo(factory, [camera, startPrediction, model, cameraReady, shouldSkip])
+}
+
+const useShouldSkip = () => {
+  const { camera, model, cameraReady } = useContext()
+
+  return !camera || !model || !cameraReady
 }
 
 export const usePrediction = () => {
   const params = useParams()
 
   useEffect(() => {
-    if (!params.camera) return
+    if (params.shouldSkip) return
 
-    const subscription = makeSubscription(params)
+    const subscription = params.startPrediction(params.model).subscribe()
 
     return () => subscription.unsubscribe()
   }, [params])
