@@ -4,7 +4,7 @@ import { mergeMap, map } from 'rxjs/operators'
 
 import { useContext } from 'camera/context'
 import { repository } from 'camera/repository'
-import { useCoroutine } from 'camera/use-coroutine'
+import { useCoroutine } from 'camera/hooks/use-coroutine'
 
 const makeSubscription = params => combineLatest([repository.camera(params.camera), repository.model()])
   .pipe(map(([_, model]) => model))
@@ -16,8 +16,10 @@ export const usePrediction = () => {
   const startPrediction = useCoroutine()
 
   useEffect(() => {
-    const subscription = makeSubscription({ camera, startPrediction })
+    if (camera.current) {
+      const subscription = makeSubscription({ camera, startPrediction })
 
-    return () => subscription.unsubscribe()
+      return () => subscription.unsubscribe()
+    }
   }, [camera, startPrediction])
 }
