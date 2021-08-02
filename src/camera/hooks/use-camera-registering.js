@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 import * as loading from 'loading/slices/loading'
 import * as register from 'camera/slices/register'
 
-export const useRegistering = () => {
+export const useCameraRegistering = () => {
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(loading.actions.show(register.actions.attempt.type))
