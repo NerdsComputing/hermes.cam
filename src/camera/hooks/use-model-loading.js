@@ -2,10 +2,10 @@ import { tap } from 'rxjs/operators'
 import { useDispatch } from 'react-redux'
 import { useEffect, useMemo } from 'react'
 import { useContext } from 'camera/context'
-import { repository } from 'camera/repository'
 import { actions } from 'loading/slices/loading'
+import * as repository from 'camera/repositories/model'
 
-const makeSubscription = ({ setModel, dispatch }) => repository.model()
+const makeSubscription = ({ setModel, dispatch }) => repository.load()
   .pipe(tap(setModel))
   .pipe(tap(() => dispatch(actions.hide('@prediction/model/loading'))))
   .subscribe()

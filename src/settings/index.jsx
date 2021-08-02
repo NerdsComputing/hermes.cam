@@ -1,14 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
-import { Loading } from 'loading'
+import { Content as Loading } from 'loading/content'
 import { useFetching } from 'settings/hooks/use-fetching'
-import { useSettings } from 'settings/hooks/use-settings'
 
 export const Settings = ({ children }) => {
-  useFetching()
+  const wereFetched = useFetching()
 
-  return useSettings() ? children : <Loading />
+  return wereFetched ? children : <Loading />
 }
 
 Settings.propTypes = { children: PropTypes.node.isRequired }
+
+export { settings } from 'settings/fetching'

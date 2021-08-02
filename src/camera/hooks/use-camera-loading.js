@@ -1,9 +1,9 @@
 import { useEffect } from 'react'
 import { tap } from 'rxjs/operators'
 import { useContext } from 'camera/context'
-import { repository } from 'camera/repository'
+import * as repository from 'camera/repositories/camera'
 
-const makeSubscription = ({ camera, setCameraReady }) => repository.camera(camera)
+const makeSubscription = ({ camera, setCameraReady }) => repository.readiness(camera)
   .pipe(tap(() => setCameraReady(true)))
   .subscribe()
 
