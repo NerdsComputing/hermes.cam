@@ -1,11 +1,12 @@
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
-import { actions } from 'loading/slices/loading'
+import * as loading from 'loading/slices/loading'
+import * as register from 'camera/slices/register'
 
 export const useRegistering = () => {
   const dispatch = useDispatch()
   useEffect(() => {
-    dispatch(actions.show('registering-camera'))
-    dispatch(actions.verify({}))
+    dispatch(loading.actions.show('registering-camera'))
+    dispatch(register.actions.attempt({}))
   }, [dispatch])
 }
