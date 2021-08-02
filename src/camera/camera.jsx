@@ -1,10 +1,9 @@
 import React from 'react'
 import Webcam from 'react-webcam'
-
 import { useContext } from 'camera/context'
 
 export const Camera = () => {
-  const { camera } = useContext()
+  const { setCamera } = useContext()
 
-  return <Webcam ref={camera} videoConstraints={{ facingMode: 'environment' }} />
+  return <Webcam ref={setCamera} videoConstraints={{ facingMode: 'environment' }} />
 }
