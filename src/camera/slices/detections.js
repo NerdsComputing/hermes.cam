@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
+  actual: [],
   buffer: [],
   attempt: undefined,
   success: undefined,
@@ -9,7 +10,8 @@ const initialState = {
 
 const buffer = (state, action) => ({
   ...state,
-  buffer: [...buffer, action.payload],
+  buffer: [...state.buffer, ...action.payload],
+  actual: action.payload,
 })
 
 const attempt = (state, action) => ({
