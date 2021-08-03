@@ -1,7 +1,6 @@
 import React from 'react'
-
-import { useContext } from 'camera/context'
 import { Detection } from 'camera/detection'
+import { useDetections } from 'camera/hooks/use-detections'
 
 const styles = {
   position: 'absolute',
@@ -12,11 +11,11 @@ const styles = {
 }
 
 export const Detections = () => {
-  const { objects } = useContext()
+  const detections = useDetections()
 
   return <div style={styles}>
     {
-      objects.map((item, index) => <Detection data={item} key={index} />)
+      detections.map((item, index) => <Detection data={item} key={index} />)
     }
   </div>
 }
