@@ -1,6 +1,6 @@
 import React from 'react'
 import { Detection } from 'camera/detection'
-import { useDetections } from 'camera/hooks/use-detections'
+import { useCurrentDetections } from 'camera/hooks/use-current-detections'
 
 const styles = {
   position: 'absolute',
@@ -11,7 +11,7 @@ const styles = {
 }
 
 export const Detections = () => {
-  const detections = useDetections()
+  const detections = useCurrentDetections()
 
   return <div style={styles}>
     {
