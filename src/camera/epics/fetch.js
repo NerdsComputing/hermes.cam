@@ -9,7 +9,7 @@ export const fetch = action$ => action$
   .pipe(ofType(fetchSlice.actions.attempt.type))
   .pipe(mergeMap(perform))
 
-const perform = () => repository.byParameter()
+const perform = action => repository.byParameter(action.payload)
   .pipe(mergeMap(successActions))
   .pipe(catchError(failureActions))
 

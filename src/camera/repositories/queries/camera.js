@@ -1,14 +1,24 @@
 import { gql } from '@apollo/client'
 
 export const byParameter = gql`
-    query {
-        cameras(parameter: {pagination: {pageIndex: 0, pageSize: 999}}) {
+    query ($parameter: TPCamera!) {
+        cameras(parameter: $parameter) {
             pageIndex
             pageSize
             totalCount
             items {
                 id
             }
+        }
+    }
+`
+
+export const register = gql`
+    mutation ($input: [TRegisterCamera!]!) {
+        registerCamera(input: $input) {
+            id
+            longitude
+            latitude
         }
     }
 `

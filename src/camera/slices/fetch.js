@@ -13,7 +13,7 @@ const attempt = (state, action) => ({
 
 const success = (state, action) => ({
   ...state,
-  success: action.success,
+  success: action.payload,
 })
 
 const failure = (state, action) => ({
