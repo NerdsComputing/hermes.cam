@@ -11,7 +11,7 @@ export const useCameraLoading = () => {
   const { camera, model, setCameraReady } = useContext()
 
   useEffect(() => {
-    if (!camera || !model) return
+    if (!camera) return
 
     const subscription = makeSubscription({ camera, setCameraReady })
 
