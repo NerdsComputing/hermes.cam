@@ -21,8 +21,8 @@ const failure = (state, action) => ({
   failure: action.payload,
 })
 
-export const register = createSlice({
-  name: 'register',
+export const fingerprint = createSlice({
+  name: 'fingerprint',
   initialState,
   reducers: {
     attempt,
@@ -31,4 +31,4 @@ export const register = createSlice({
   },
 })
 
-export const { actions } = register
+export const { actions } = fingerprint
