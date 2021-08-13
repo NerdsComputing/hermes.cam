@@ -1,7 +1,7 @@
 import { gql } from '@apollo/client'
 
 export const byParameter = gql`
-    query ($parameter: TPCamera!) {
+    query ($parameter: CameraParameter!) {
         cameras(parameter: $parameter) {
             pageIndex
             pageSize
