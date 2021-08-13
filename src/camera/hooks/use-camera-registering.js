@@ -13,6 +13,11 @@ const useParams = () => {
   return useMemo(() => ({ dispatch, shouldRegister, fingerprint }), [dispatch, shouldRegister, fingerprint])
 }
 
+const makePosition = () => ({
+  longitude: Math.random(),
+  latitude: Math.random(),
+})
+
 export const useCameraRegistering = () => {
   const params = useParams()
 
@@ -20,6 +25,6 @@ export const useCameraRegistering = () => {
     if (!params.shouldRegister) return
 
     params.dispatch(loading.actions.show(register.actions.attempt.type))
-    params.dispatch(register.actions.attempt([{ id: params.fingerprint, longitude: '-1', latitude: '-1' }]))
+    params.dispatch(register.actions.attempt([{ id: params.fingerprint, ...makePosition() }]))
   }, [params])
 }
