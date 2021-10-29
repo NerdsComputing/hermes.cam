@@ -14,10 +14,18 @@ const useParams = () => {
 
 export const useCoroutine = () => {
   const params = useParams()
+  const chunks = []
 
   return useCallback(model => of([])
-    .pipe(mergeMap(() => from(model.detect(params.camera.video))))
-    .pipe(tap(detection => params.dispatch(actions.buffer(detection))))
-    .pipe(delay(1000))
-    .pipe(repeat()), [params])
+    .pipe(tap(detection => {
+      const mediaRecorder = new MediaRecorder(params.camera.stream)
+
+      mediaRecorder.ondataavailable = event => {
+        debugger
+        chunks.push(event.data)
+      }
+
+      mediaRecorder.start()
+    }))
+    .pipe(delay(1000)) , [params])
 }
